@@ -1,0 +1,56 @@
+/* Initially hide the buttons on larger screens */
+.Side-button {
+    display: none;
+  }
+  
+  /* Only show the buttons on mobile screens */
+  @media screen and (max-width: 768px) {
+      .Side-button {
+          position: fixed;
+          bottom: 20px;
+          height: 50px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: white;
+          font-size: 24px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transition: background-color 0.3s, transform 0.3s;
+          z-index: 1000  ;
+      }
+      
+      /* Adjusting the positions of the buttons */
+      .Side-button.call {
+          left: 0;
+          background-color: #2c64ad;
+          
+          top: 44.7%;
+      }
+      
+      .Side-button.call:hover {
+          background-color: #34608a;
+      }
+      
+      .Side-button.whatsapp {
+          left: 0;
+          background-color: #e01313;
+          top: 38%;
+      }
+      
+      .Side-button.whatsapp:hover {
+          background-color: #1DA851;
+      }
+      
+      .Side-button.instagram {
+          left: 0;
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          top: 31.6%;
+      }
+      
+      .Side-button.instagram:hover {
+          background-color: rgba(0, 0, 0, 0.199);
+      }
+  }
+  

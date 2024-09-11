@@ -1,0 +1,245 @@
+/* Hero Section */
+/* Apply animations to page sections */
+.about-hero, 
+.gallery-section, 
+.image-grid, 
+.gallery-modal-content {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Exit animation when leaving the page */
+.about-hero.exit-active, 
+.gallery-section.exit-active, 
+.image-grid.exit-active, 
+.gallery-modal-content.exit-active {
+  animation: fadeOutDown 1.5s ease-in-out;
+}
+.about-hero {
+  background: url('../assets/heroimage.jpg') no-repeat center center/cover;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-hero .hero-content {
+  text-align: left;
+  color: #ffffff;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero .hero-content h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.about-hero .hero-content h2::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Breadcrumb Section */
+.breadcrumb {
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-icon {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-right: 0.5rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+  margin: 20px;
+  text-align: center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-right: 20rem;
+  margin-left: 20rem;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 250px;
+  flex-grow: 1;
+  border-radius: 0;
+}
+
+.image-card img {
+  height: 100%;
+  width: auto;
+  min-width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Modal Styling */
+.gallery-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.gallery-modal-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery-modal-close-btn {
+  position: absolute;
+  top: -16px;
+  right: -9px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.gallery-modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 -25px 0 -25px;
+}
+
+.prevbtn {
+  left: 10px;
+}
+
+.nextbtn {
+  right: 10px;
+}
+
+.gallery-modal-image {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 0px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 30vh;
+    justify-content: left;
+  }
+
+  .about-hero .hero-content h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+  .image-grid {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .gallery-modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .gallery-modal-nav-btn-prevbtn {
+    font-size: 20px;
+    left: 0;
+  }
+
+  .gallery-modal-nav-btn-nextbtn {
+    font-size: 20px;
+    right: 0;
+  }
+
+  .gallery-modal-close-btn {
+    font-size: 20px;
+    top: -29px;
+    right: -7px;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

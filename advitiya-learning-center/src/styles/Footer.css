@@ -1,0 +1,122 @@
+.footer {
+    background-color: #141414; /* Dark background for contrast */
+    color: #ffffff; /* White text */
+    padding: 3rem 1rem;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 300px;
+  }
+  
+  .footer-social {
+    margin-top: 1rem;
+  }
+  
+  .footer-social a {
+    margin-right: 1rem;
+    color: #ff00c3;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #9d4edd;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff00c3;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #9d4edd;
+  }
+  
+  .footer-contact a {
+    color: #ffffff; /* Matches the existing text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-contact a:hover {
+    color: #ff00c3; /* Matches your branding colors */
+  }
+  .footer-contact p{
+    margin-bottom: 10px;
+  }
+  .footer-contact p svg {
+    margin-right: 0.5rem;
+    color: #ff00c3;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    color: #ccc;
+  }
+  
+  .footer-bottom a {
+    color: #ff00c3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-bottom a:hover {
+    color: #9d4edd;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-logo,
+    .footer-links,
+    .footer-contact {
+      margin-bottom: 2rem;
+    }
+    .footer-logo p{
+      margin-left: 40px;
+    }
+  }
+  

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --primary-color: #4B007D;
+  --secondary-color: #FF00C3;
+  --accent-color: #9D4EDD;
+  --light-color: #ffffff;
+  --text-color: #333333;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: var(--light-color);
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo-container img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.contact-details p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.contact-details a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar{
+    padding: 0px 13px 0 10px;
+  }
+  .navbar-container{
+    padding: 0px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: var(--light-color);
+    padding: 1rem;
+    z-index: 999;
+  }
+  .donate-btn{
+    margin-right: 0px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+}
+
+@media (max-width: 768px){
+  .donate-btn{
+    margin-right: 0px;
+  }
+}
+/* Navbar.css */
+
+.donate-btn {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: blink 2s infinite, pulse 1.5s infinite alternate;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-right: 12px;
+}
+
+.donate-btn:hover {
+  transform: scale(1.1);
+  background-color: #ff1493;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    background-color: #ff69b4;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+  }
+  25%, 75% {
+    background-color: #ff1493;
+    color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(255, 20, 147, 0.9);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 105, 180, 1);
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Popup Content */
+.popup-content {
+  background: white;
+  padding: 30px; /* Increased padding for a more spacious feel */
+  border-radius: 15px; /* More rounded corners */
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  animation: slideIn 0.3s ease;
+}
+
+/* Heading Style */
+.popup-content h2 {
+  margin-bottom: 15px;
+  color: #ff69b4; /* Matching with your theme */
+  font-size: 24px; /* Larger font size */
+  font-weight: 700; /* Bold font weight */
+}
+
+/* Donate Button */
+.donate-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ff69b4, #ff1493); /* Gradient for more impact */
+  color: white;
+  border-radius: 25px; /* Full-rounded button */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.donate-link:hover {
+  background-color: #ff1493; /* Consistent hover color */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Close Button */
+.close-popup {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-popup:hover {
+  background-color: #bbb; /* Slightly darker on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,304 @@
+.services-hero, 
+.services-page, 
+.vocational-training-section{
+  animation: fadeInUp 1.5s ease-in-out;
+}
+.services-hero.exit-active, 
+.services-page.exit-active, 
+.vocational-training-section.exit-active{
+  animation: fadeOutDown 1.5s ease-in-out;
+}
+.services-hero {
+    background: url('../assets/heroimage.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: left;
+    color: #ffffff;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.services-hero .hero-content h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.services-hero .hero-content h1::before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    background: #FF0080; /* Adjust to match your color theme */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.services-hero .breadcrumb {
+    font-size: 1rem;
+    color: #ffffff;
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: #FF0080; /* Matching breadcrumb link color */
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-icon {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-right: -0.5rem;
+}
+
+/* Services Section */
+.services-page {
+    padding: 4rem 2rem;
+    background-color: #f1f4f8;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-header h1 {
+    font-size: 3rem;
+    color: #8A2BE2; /* Primary theme color */
+    margin-bottom: 0.5rem;
+}
+
+.services-header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #8A2BE2; /* Complementary color */
+    margin-bottom: 1rem;
+}
+
+.services-page .service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.service-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.enquiry-button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #8A2BE2; /* Matching button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.enquiry-button:hover {
+    background: #7A1FCB;
+    transform: scale(1.05);
+}
+/* Vocational Training Section */
+.vocational-training-section {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, #F3E5F5, #E1BEE7); /* Subtle gradient background */
+    text-align: center;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #6A1B9A; /* Adjusted to a deeper purple for better contrast */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vocational-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.vocational-item {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.vocational-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(106, 27, 154, 0.2); /* Updated to match section color */
+}
+
+.vocational-icon {
+    font-size: 2.8rem;
+    color: #8E24AA; /* Softer purple for a refined look */
+    margin-bottom: 1rem;
+}
+
+.vocational-item-title {
+    font-size: 1.6rem;
+    color: #6A1B9A;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.vocational-item-description {
+    font-size: 1rem;
+    color: #444; /* Darker shade for better readability */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-know-more-btn {
+    padding: 0.7rem 1.4rem;
+    background: #6A1B9A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.service-know-more-btn:hover {
+    background: #5E35B1; /* Slightly darker hover effect */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #D81B60; /* Contrasting color for visibility */
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: #6A1B9A;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.modal-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+/* Fade-In Animation */
+@media (max-width: 768px) {
+    .services-hero{
+        height: 30vh;
+        justify-content: left;
+    }
+    .services-hero .hero-content h1{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,520 @@
+.about-hero, 
+.about-us-section, 
+.quote-section, 
+.mission-section,
+.leadership-section {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Exit animation when leaving the page */
+.about-hero.exit-active, 
+.about-us-section.exit-active, 
+.quote-section.exit-active, 
+.mission-section.exit-active,
+.leadership-section.exit-active {
+  animation: fadeOutDown 1.5s ease-in-out;
+}
+.about-hero {
+  background: url('../assets/heroimage.jpg') no-repeat center center/cover;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  /* Adjust transparency for the dark overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero .hero-content {
+  text-align: left;
+  color: #ffffff;
+  padding: 1rem;
+  position: relative;
+  /* Ensure content is positioned above the overlay */
+  z-index: 1;
+  /* Ensure text appears above the overlay */
+}
+
+.about-hero .hero-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.about-hero .hero-content h1::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: var(--secondary-color);
+  /* Set the blue color here */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.breadcrumb {
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #007BFF;
+  /* Blue color for the breadcrumb link */
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-icon {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-right: -0.5rem;
+}
+
+/* About us Section */
+.about-us-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  /* Ensures images and content are side by side */
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  gap: 4rem;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.about-images {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  /* Ensure images are placed horizontally */
+  gap: 1rem;
+}
+
+.about-img-1 {
+  width: 70%;
+  /* Adjusted to fit side by side */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.about-img-2 {
+  width: 70%;
+  /* Adjusted to fit side by side */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.about-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #333;
+}
+
+.about-content h2 {
+  font-size: 5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.2rem;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.about-content p {
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.vision-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.vision-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.vision-content h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.stats {
+  margin-left: -4rem;
+  margin-top: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stats h2 {
+  font-size: 4.5rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.stats p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Quotes */
+.quote-section {
+  background: url('../assets/heroimage.jpg') no-repeat center center/cover;
+  /* Replace with your background image path */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  background-attachment: fixed;
+  height: 35vh;
+}
+
+.quote-overlay {
+  background: rgba(0, 0, 0, 0.418);
+  /* Add an overlay effect */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100vw;
+  height: 100%;
+}
+
+.quote-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.quote-section p {
+  font-size: 1.2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mission */
+.mission-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.mission-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.mission-content {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-list li {
+  font-size: rem;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mission-list li::before {
+  content: '•';
+  color: #FFA500;
+  /* Customize this color to match the bullet point */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+}
+
+/* Leadership */
+.leadership-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f7ff;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Description Card Styling */
+.leadership-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.description-logo {
+  width: 170px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.description-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/* Leadership Title Styling */
+.leadership-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Leaders Container Styling */
+.leaders-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Leader Card Styling */
+.leader-card {
+  background: #fff;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.leader-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.leader-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.leader-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Styling for Tablets and Phones */
+@media (max-width: 1024px) {
+  .about-us-section {
+    padding: 4rem 1rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 2rem;
+  }
+
+  .about-images {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .about-img-1,
+  .about-img-2 {
+    width: 50%;
+    margin: 0;
+    /* Remove additional margins */
+  }
+
+  .stats {
+    margin-left: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-content {
+    text-align: left;
+    align-items: left;
+  }
+
+  .vision-section {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mission-title {
+    text-align: center;
+  }
+
+  .leadership-section {
+    padding: 40px 10px;
+  }
+
+  .leaders-container {
+    flex-direction: row;
+    gap: 7px;
+    flex-wrap: nowrap;
+    margin: 0 30px 0 30px;
+}
+
+.leader-image {
+  width: 156px;
+}
+
+.leader-card {
+  width: 90%;
+}
+
+.quote-section {
+  text-align: center;
+}
+
+.quote-section h2 {
+  font-size: 1.8rem;
+  margin-top: -1rem;
+}
+
+.quote-section p {
+  font-size: 1.1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.4;
+  /* width: 370px; */
+}
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 30vh;
+    justify-content: left;
+  }
+
+  .about-hero .hero-content h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.875rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .stats h2 {
+    font-size: 3rem;
+  }
+
+  .leadership-title {
+    font-size: 2rem;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

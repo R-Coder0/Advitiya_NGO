@@ -1,0 +1,125 @@
+.floating-buttons-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.floating-buttons-container.open .floating-buttons {
+    transform: translateX(0);
+}
+
+.floating-buttons-container .floating-buttons {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.toggle-button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.floating-button {
+    width: 50px;
+    height: 50px;
+    background-color: #25D366;
+    color: white;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    font-size: 2rem;
+}
+
+.floating-button.email {
+    background-color: #EA4335;
+    font-size: 2rem;
+}
+
+.floating-button.instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+.floating-button.youtube {
+    background-color: red;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .floating-buttons-container {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        top: 98%;
+        gap: 0px;
+    }
+
+    .floating-buttons-container .floating-buttons {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        transform: translateX(0);
+        /* Keep buttons visible on mobile */
+    }
+
+    .floating-button {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        border-radius: 0;
+        /* Remove border radius for mobile */
+        flex: 1;
+        margin: 0px -5px 0px 0px;
+    }
+
+    .toggle-button {
+        width: 40px;
+        height: 50px;
+        border-radius: 0;
+    }
+
+    .floating-buttons-container.open .floating-buttons {
+        transform: translateY(0);
+    }
+
+    .floating-buttons-container .floating-buttons {
+        display: flex;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .floating-button.instagram {
+        display: none;
+    }
+
+    .floating-button.youtube {
+        display: none;
+    }
+}
